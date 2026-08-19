@@ -1,4 +1,3 @@
-
 @model MVC2026.Cliente
 @{
     ViewData["Title"] = "Cadastro de Clientes";
@@ -7,122 +6,70 @@
 <div class="container">
 
     <h1 class="text-center mt-3 fw-bold">Cadastro de Cliente</h1>
-    
+
     <form action="#" method="get">
         <div class="row">
-            <div class="col-3">
+            <div class="col-xl-4 col-sm-12 mb-3">
                 <label asp-for="Id">Código</label>
-                <input type="number" 
-                        class="form-control" 
-                        placeholder="Código do Cliente..." 
-                        asp-for="Id">
+                <input type="number" class="form-control" placeholder="Código do Cliente..." asp-for="Id">
             </div>
 
-            
-            <div class="col-3">
+            <div class="col-12 col-sm-12 md-3">
                 <label asp-for="Nome">Nome Completo</label>
-                <input type="text" 
-                        class="form-control" 
-                        placeholder="Nome Completo..." 
-                        asp-for="Nome">
+                <input type="text" class="form-control" placeholder="Nome Completo..." asp-for="Nome">
             </div>
-            <div class="col-3">
+            <div class="col-12 col-md-9 mt-3">
+                <label asp-for="CPF"> CPF</label>
+                <input type="number" class="form-control" placeholder="Seu CPF..." asp-for="CPF">
+            </div>
+            <div class="col- col-sm-12 md-3">
                 <label asp-for="Endereco">Endereço</label>
-                <input type="text" 
-                        class="form-control" 
-                        placeholder="Seu Endereço..." 
-                        asp-for="Endereco">
+                <input type="string" class="form-control" placeholder="Seu Endereço..." asp-for="Endereco">
+            </div>
 
-                
-                    <div class="row">
-                        <div class="col-3">
+            <div class="col-5 col-sm-12 md-3">
                 <label asp-for="Bairro"> Bairro</label>
-                <input type="text" 
-                        class="form-control" 
-                        placeholder="Seu Bairro..." 
-                        asp-for="Bairro">
+                <input type="text" class="form-control" placeholder="Seu Bairro..." asp-for="Bairro">
             </div>
-                <div >
-                    <label asp-for="Cidade"> Cidade</label>
-                <input type="text" 
-                        class="form-control" 
-                        placeholder="Sua Cidade..." 
-                        asp-for="Cidade">
-                </div>
-
-
-                <div class="col-3">
-                        <label asp-for="UF"> UF</label>
-                <input type="text" 
-                        class="form-control" 
-                        placeholder="Seu UF..." 
-                        asp-for="UF">
-                </div>
-                
-
-                <div class="col-3">
-                    <label asp-for="CEP"> CEP</label>
-                <input type="text" 
-                        class="form-control" 
-                        placeholder="Seu CEP..." 
-                        asp-for="CEP">
-                </div>
-
-                <div class="col-3">
-                    <label asp-for="CPF"> CPF</label>
-                <input type="text" 
-                        class="form-control" 
-                        placeholder="Seu CPF..." 
-                        asp-for="CPF">
-                </div>
-
-
-                <div class="col-3">
-                    <label asp-for="Email"> Email</label>
-                <input type="text" 
-                        class="form-control" 
-                        placeholder="Seu Endereço de Email..." 
-                        asp-for="Email">
-
-                </div>
-
-                
-                <div class="row mt-3">
-                    <label asp-for="Celular"> Celular</label>
-                <input type="text" 
-                        class="form-control" 
-                        placeholder="celular..." 
-                        asp-for="Celular">
-                </div>
-
-
-                <div class="col">
-                    <label asp-for="DataNascimento"> Data Nascimento</label>
-                <input type="Date" value="" class="form-control" 
-                        class="form-control" 
-                        placeholder="Data Nascimento..." 
-                        asp-for="DataNascimento">
-                </div>
-    
+            <div class="col-5 col-sm-12 md-3">
+                <label asp-for="Cidade"> Cidade</label>
+                <input type="text" class="form-control" placeholder="Seu Cidade..." asp-for="Cidade">
+            </div>
+            <div class="col-xl-4 col-sm-12 md-3">
+                <label asp-for="UF"> UF</label>
+                <input type="form-select" id="UF" name="UF" class="form-control" placeholder="Seu UF..." asp-for="UF">
             </div>
 
-            <div>
+            <div class="col-xl-4 col-sm-12 md-3">
+                <label asp-for="CEP"> CEP</label>
+                <input type="string" class="form-control" placeholder="Seu CEP..." asp-for="CEP">
+            </div>
+            <div class="col-xl-4 col-sm-12 md-3">
+                <label asp-for="Email"> Email</label>
+                <input type="text" class="form-control" placeholder="Seu Endereço de Email..." asp-for="Email">
+            </div>
+
+            <div class="col-xl-4 col-sm-12 md-3">
+                <label asp-for="Celular"> Celular</label>
+                <input type="string" class="form-control" placeholder="celular..." asp-for="Celular">
+            </div>
+            <div class="col-xl-4 col-sm-12 md-3">
+                <label asp-for="DataNascimento"> Data Nascimento</label>
+                <input type="Date" value="" class="form-control" class="form-control" placeholder="Data Nascimento..."
+                       asp-for="DataNascimento">
+            </div>
+            <div class="col-xl-4 col-sm-12 md-3">
                 <label asp-for="Observacao"> Observação</label>
-                <input type="text" 
-                        class="form-control" 
-                        placeholder="opicional..." 
-                        asp-for="Observacao">
+                <input type="text" class="form-control" placeholder="opicional..." asp-for="Observacao">
             </div>
-    
-                                <div class="row mt-5">
-            <div class="col text-center">
-                <input type="reset" value="Limpar" class="w-50 btn btn-outline-secondary"/>
+            <div class="row mt-5">
+                <div class="col text-center">
+                    <input type="reset" value="Limpar" class="w-50 btn btn-outline-secondary" />
+                </div>
+                <div class="col text-center">
+                    <input type="submit" value="Enviar" class="w-50 btn btn-primary" />
+                </div>
             </div>
-            <div class="col text-center">
-                <input type="submit" value="Enviar" class="w-50 btn btn-primary" />
-            </div>
-        </div>
         </div>
     </form>
-
 </div>
